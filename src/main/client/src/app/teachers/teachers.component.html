@@ -1,0 +1,31 @@
+<div class="card-container" >
+
+    <div *ngFor="let staff of listOfStaff; let i = index">
+          <div class="card" target="_blank" rel="noopener" >
+            <img class="small_prof_pic" src="{{staff.image}}" alt="Harry">
+              <div class="card-body">
+
+
+              <span class="card-title"> <b>{{staff.name}}</b></span> <br>
+              <span class="card-text">
+                <b>Position:</b> {{staff.position}}
+                </span> <br>
+              <a href="#more_info{{staff.id}}" id="more_info_button">Profile</a> <br>
+            </div>
+          </div>
+          <!-- Profile popup-->
+          <div id="more_info{{staff.id}}" class="overlay">
+            <div class="popup">
+              <img class="prof_pic" src="{{staff.image}}" alt="Harry">
+              <div class="content">
+                <b>Name:</b> {{staff.name}}<br>
+                <b>Position:</b> {{staff.position}} <br>
+                <b>Other information:</b> {{staff.details}}
+              </div>
+              <a class="close" href="#">&times;</a>
+            </div>
+          </div>
+          
+      </div>
+
+</div>

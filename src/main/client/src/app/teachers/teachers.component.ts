@@ -21,7 +21,7 @@ export class TeachersComponent implements OnInit {
   }
 
   getAllTheStaff(){
-    return this.http.get<TeacherModule[]>("http://localhost:8080/getAllTeacher").subscribe(
+    return this.http.get<TeacherModule[]>("/getAllTeacher").subscribe(
       result =>{
         result.forEach((e) => TeachersComponent.listOfStaffStatic.push(e))
       }

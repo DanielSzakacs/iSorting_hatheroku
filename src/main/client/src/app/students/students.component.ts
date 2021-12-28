@@ -25,7 +25,7 @@ export class StudentsComponent implements OnInit {
 
 
   getAllStudent(){
-    return this.http.get<StudentModule[]>("http://localhost:8080/getAllStudent").subscribe(
+    return this.http.get<StudentModule[]>("/getAllStudent").subscribe(
       result =>{
         result.forEach((e) => StudentsComponent.listOfStudentsStatic.push(e))
       }
